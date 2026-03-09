@@ -146,7 +146,7 @@ export const SONGS: Song[] = [
 
 export const SUPPORT_LINK = "https://www.buymeacoffee.com/kmcei";
 
-export const ABOUT_TEXT = "KMCEI Productions is a creative studio dedicated to producing immersive experiences. Helping bridge the gap between imagination and intangible limitations.";
+export const ABOUT_TEXT = "";
 
 export const DESIGN_TOKENS = {
   colors: {
@@ -154,7 +154,7 @@ export const DESIGN_TOKENS = {
     secondary: '#00F0FF',
     background: '#0A0A0A',
     surface: '#121212',
-    text: '#FFFFFF',
+    text: '#F5F5F4',
     muted: '#888888'
   },
   spacing: {

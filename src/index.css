@@ -8,6 +8,7 @@
   --color-brand-dark: #121212;
   --color-brand-accent: #00F0FF; /* Technical Cyan */
   --color-brand-accent-glow: rgba(0, 240, 255, 0.3);
+  --color-white: #F5F5F4; /* Professional Off-White */
   
   /* Typography */
   --font-display: "Cormorant Garamond", serif;

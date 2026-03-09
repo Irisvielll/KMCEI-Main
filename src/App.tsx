@@ -495,14 +495,7 @@ export default function App() {
                   </motion.div>
 
                   <div className="max-w-4xl mx-auto space-y-8">
-                    <motion.p 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.4 }}
-                      className="text-xl md:text-3xl font-display italic font-light text-white/70 leading-relaxed tracking-wide px-4"
-                    >
-                      "KMCEI Productions is a creative studio dedicated to producing immersive experiences. <span className="text-brand-gold/60">Helping bridge the gap between imagination and intangible limitations.</span>"
-                    </motion.p>
+
 
                     <motion.div
                       initial={{ opacity: 0 }}
@@ -510,7 +503,7 @@ export default function App() {
                       transition={{ delay: 0.6 }}
                       className="flex flex-col items-center gap-4 pt-8"
                     >
-                      <span className="text-[9px] font-mono text-brand-accent uppercase tracking-[0.5em]">Forging stories into living fabric</span>
+                      <span className="text-[9px] font-mono text-brand-accent uppercase tracking-[0.5em]">Forging stories into the living ether</span>
                       <motion.div 
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
@@ -551,9 +544,11 @@ export default function App() {
                   <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 blur-[100px] -mr-32 -mt-32" />
                   
                   <div className="relative space-y-12">
-                    <h3 className="text-3xl md:text-5xl font-display italic text-white/80 leading-tight tracking-tight max-w-[90%]">
-                      {ABOUT_TEXT}
-                    </h3>
+                    {ABOUT_TEXT && (
+                      <h3 className="text-3xl md:text-5xl font-display italic text-white/80 leading-tight tracking-tight max-w-[90%]">
+                        {ABOUT_TEXT}
+                      </h3>
+                    )}
                     
                     <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-white/5">
                       <p className="text-sm text-white/40 leading-relaxed text-justify font-light">
