@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# KMCEI | Digital Excellence
 
-# Run and deploy your AI Studio app
+A high-end digital ecosystem for games, literature, and media.
 
-This contains everything you need to run your app locally.
+## Tech Stack
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Animations**: Motion (formerly Framer Motion)
+- **Icons**: Lucide React
+- **Build Tool**: Vite
 
-View your app in AI Studio: https://ai.studio/apps/1806706c-4f3a-480d-a92f-6d3f2dfc5fe2
+## Getting Started
 
-## Run Locally
+### Prerequisites
+- Node.js (v18 or higher)
+- npm
 
-**Prerequisites:**  Node.js
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
+### Development
+Run the development server:
+```bash
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Build
+Build for production:
+```bash
+npm run build
+```
+
+## License
+All rights reserved. © 2026 KMCEI.
