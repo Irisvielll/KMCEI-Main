@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Luxury & Technical */
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-muted: #AA8B2E;
+  --color-brand-black: #0A0A0A;
+  --color-brand-dark: #121212;
+  --color-brand-accent: #00F0FF; /* Technical Cyan */
+  --color-brand-accent-glow: rgba(0, 240, 255, 0.3);
+  
+  /* Typography */
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing - 8px Grid */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;    /* 16px */
+  --spacing-lg: 1.5rem;  /* 24px */
+  --spacing-xl: 2rem;    /* 32px */
+  --spacing-2xl: 3rem;   /* 48px */
+  --spacing-3xl: 4rem;   /* 64px */
+
+  /* Animation */
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-border-shift: borderShift 3s linear infinite;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px var(--color-brand-accent-glow); }
+  to { box-shadow: 0 0 20px var(--color-brand-accent-glow); }
+}
+
+@keyframes borderShift {
+  0% { border-color: var(--color-brand-accent); }
+  50% { border-color: var(--color-brand-gold); }
+  100% { border-color: var(--color-brand-accent); }
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-white font-sans antialiased selection:bg-brand-accent selection:text-black;
+  }
+  
+  h1, h2, h3 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* Custom Utilities for Technical Glow */
+.tech-glow {
+  text-shadow: 0 0 10px var(--color-brand-accent-glow);
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+}
+
+.locked-overlay {
+  @apply absolute inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-10 rounded-2xl;
+}
+
