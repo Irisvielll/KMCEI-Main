@@ -14,7 +14,7 @@ async function startServer() {
   const PORT = 3000;
 
   // Database setup
-  const db = new Database("kmcei.db");
+  const db = new Database(":memory:");
   db.exec(`
     CREATE TABLE IF NOT EXISTS analytics (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
