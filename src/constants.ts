@@ -1,57 +1,23 @@
-import { Instagram, Linkedin, Twitter, Globe, Youtube, Music, BookOpen, Lock, ExternalLink, Mail, Github } from 'lucide-react';
-
-export interface SocialLink {
-  platform: string;
-  url: string;
-  icon: any;
-}
-
-export interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  links: SocialLink[];
-  tier: 'primary' | 'secondary' | 'standard';
-}
-
-export interface GameInfo {
-  platform: string;
-  releaseDate: string;
-  engine: string;
-  genre: string;
-}
-
-export interface Game {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  info: GameInfo;
-}
-
-export interface MediaLink {
-  platform: 'YouTube' | 'Instagram' | 'X' | 'LinkedIn' | 'SoundCloud';
-  url: string;
-  icon: any;
-}
-
-export interface MerchItem {
-  id: string;
-  name: string;
-  price: string;
-  image: string;
-  storeUrl: string;
-}
-
-export interface Novel {
-  id: string;
-  title: string;
-  description: string;
-  link: string;
-  image: string;
-}
+import { 
+  Instagram, 
+  Linkedin, 
+  Twitter, 
+  Globe, 
+  Youtube, 
+  Music, 
+  BookOpen, 
+  ExternalLink, 
+  Mail, 
+  Github 
+} from 'lucide-react';
+import { 
+  TeamMember, 
+  Game, 
+  MediaLink, 
+  MerchItem, 
+  Novel, 
+  Song 
+} from './types';
 
 export const GAMES: Game[] = [
   {
@@ -113,16 +79,6 @@ export const MERCH_ITEMS: MerchItem[] = [
   }
 ];
 
-export interface Song {
-  id: string;
-  title: string;
-  featuredIn: string;
-  composer: string;
-  duration: string;
-  license: string;
-  image: string;
-}
-
 export const SONGS: Song[] = [
   {
     id: 'song-1',
@@ -146,7 +102,7 @@ export const SONGS: Song[] = [
 
 export const SUPPORT_LINK = "https://www.buymeacoffee.com/kmcei";
 
-export const ABOUT_TEXT = "";
+export const ABOUT_TEXT = "Architecting digital ecosystems with a focus on high-end aesthetics and technical precision. We bridge the gap between imagination and reality.";
 
 export const DESIGN_TOKENS = {
   colors: {
