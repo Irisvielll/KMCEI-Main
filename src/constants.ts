@@ -100,7 +100,7 @@ export const SONGS: Song[] = [
   }
 ];
 
-export const SUPPORT_LINK = "https://www.buymeacoffee.com/kmcei";
+export const SUPPORT_LINK = "https://ko-fi.com/kmcei";
 
 export const ABOUT_TEXT = "Architecting digital ecosystems with a focus on high-end aesthetics and technical precision. We bridge the gap between imagination and reality.";
 

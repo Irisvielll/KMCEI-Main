@@ -63,3 +63,39 @@
   @apply absolute inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-10 rounded-2xl;
 }
 
+/* Luxury Scrollbar */
+.luxury-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 transparent;
+}
+
+.luxury-scroll::-webkit-scrollbar {
+  height: 3px;
+  width: 3px;
+}
+
+.luxury-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.luxury-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #D4AF37, #AA8B2E);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.luxury-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* Hide scrollbar but keep functionality if needed */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

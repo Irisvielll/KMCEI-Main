@@ -64,6 +64,13 @@ Find `export const SONGS: Song[] = [` and add:
 }
 ```
 
+### ☕ Connecting your Ko-fi
+Find `export const SUPPORT_LINK` and update it with your Ko-fi page URL:
+
+```typescript
+export const SUPPORT_LINK = "https://ko-fi.com/YOUR_USERNAME";
+```
+
 ---
 
 ## 🚀 Part 2: Deploying to GitHub Pages

@@ -130,13 +130,13 @@ function AppContent() {
               <p className="text-sm text-white/40 font-mono uppercase tracking-widest">Interactive Realities</p>
             </div>
 
-            <div className="lg:w-3/4 flex flex-wrap gap-12 justify-center lg:justify-start">
+            <div className="lg:w-3/4 flex overflow-x-auto pb-8 gap-12 luxury-scroll snap-x snap-mandatory">
               {GAMES.map((game) => (
-                <div key={game.id} className="w-full lg:w-[calc(50%-24px)] min-w-[320px]">
+                <div key={game.id} className="w-full lg:w-[calc(50%-24px)] min-w-[320px] shrink-0 snap-start">
                   <GameCard game={game} />
                 </div>
               ))}
-              <div className="w-full lg:w-[calc(50%-24px)] min-w-[320px] flex">
+              <div className="w-full lg:w-[calc(50%-24px)] min-w-[320px] flex shrink-0 snap-start">
                 <ComingSoonCard />
               </div>
             </div>
@@ -178,13 +178,13 @@ function AppContent() {
                 <p className="text-sm text-white/40 font-mono uppercase tracking-widest">Social & Professional Channels</p>
               </div>
             </div>
-            <div className="lg:w-3/4 flex flex-wrap gap-6">
+            <div className="lg:w-3/4 flex overflow-x-auto pb-8 gap-6 luxury-scroll snap-x snap-mandatory">
               {MEDIA_LINKS.map((link, i) => (
                 <motion.a
                   key={i}
                   href={link.url}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="glass-card p-8 flex flex-col items-center gap-4 min-w-[160px] group border-white/5 hover:border-brand-accent/30"
+                  className="glass-card p-8 flex flex-col items-center gap-4 min-w-[160px] group border-white/5 hover:border-brand-accent/30 shrink-0 snap-start"
                   aria-label={`Visit our ${link.platform} page`}
                 >
                   <link.icon size={32} className="text-brand-accent group-hover:tech-glow transition-all" />
@@ -197,11 +197,27 @@ function AppContent() {
                 href={SUPPORT_LINK}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="glass-card p-8 flex flex-col items-center gap-4 min-w-[160px] group border-brand-gold/30 hover:border-brand-gold/60"
-                aria-label="Support us on Buy Me a Coffee"
+                aria-label="Support us on Ko-fi"
               >
-                <Coffee size={32} className="text-brand-gold group-hover:tech-glow transition-all" />
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <svg 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className="text-brand-gold group-hover:tech-glow transition-all w-full h-full"
+                  >
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" y1="1" x2="6" y2="4" />
+                    <line x1="10" y1="1" x2="10" y2="4" />
+                    <line x1="14" y1="1" x2="14" y2="4" />
+                  </svg>
+                </div>
                 <span className="text-xs font-mono uppercase tracking-widest text-brand-gold/60 group-hover:text-brand-gold transition-colors">
-                  Support
+                  Ko-fi
                 </span>
               </motion.a>
             </div>
@@ -243,11 +259,15 @@ function AppContent() {
                   <Music size={20} className="text-brand-accent" />
                   <h3 className="text-2xl font-display">Original Compositions</h3>
                 </div>
-                <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide">
+                <div className="flex gap-6 overflow-x-auto pb-6 luxury-scroll snap-x snap-mandatory">
                   {SONGS.map((song) => (
-                    <SongCard key={song.id} song={song} />
+                    <div key={song.id} className="shrink-0 snap-start">
+                      <SongCard song={song} />
+                    </div>
                   ))}
-                  <ComingSoonCard />
+                  <div className="shrink-0 snap-start flex">
+                    <ComingSoonCard />
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,13 +281,13 @@ function AppContent() {
                 <p className="text-sm text-white/40 font-mono uppercase tracking-widest">Bespoke Artifacts</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-8 justify-center lg:justify-start">
+            <div className="flex overflow-x-auto pb-8 gap-8 luxury-scroll snap-x snap-mandatory">
               {MERCH_ITEMS.map((item) => (
-                <div key={item.id} className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] min-w-[280px]">
+                <div key={item.id} className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] min-w-[280px] shrink-0 snap-start">
                   <MerchCard item={item} />
                 </div>
               ))}
-              <div className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] min-w-[280px] flex">
+              <div className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] min-w-[280px] flex shrink-0 snap-start">
                 <ComingSoonCard />
               </div>
             </div>
@@ -280,15 +300,13 @@ function AppContent() {
               <p className="text-sm text-white/40 font-mono uppercase tracking-widest">Leadership & Creative Direction</p>
             </div>
 
-            <div className="lg:w-3/4 flex flex-col gap-8">
-              <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap gap-6">
-                {TEAM_MEMBERS.map((member) => (
-                  <div key={member.id} className={`w-full ${member.tier === 'primary' ? 'lg:flex-[1.5]' : 'lg:flex-1'}`}>
-                    <MemberCard member={member} />
-                  </div>
-                ))}
-              </div>
-              <div className="flex justify-end">
+            <div className="lg:w-3/4 flex overflow-x-auto pb-8 gap-8 luxury-scroll snap-x snap-mandatory">
+              {TEAM_MEMBERS.map((member) => (
+                <div key={member.id} className={`shrink-0 snap-start ${member.tier === 'primary' ? 'w-[400px] md:w-[600px]' : 'w-[300px] md:w-[450px]'}`}>
+                  <MemberCard member={member} />
+                </div>
+              ))}
+              <div className="shrink-0 snap-start flex">
                 <ComingSoonCard />
               </div>
             </div>
