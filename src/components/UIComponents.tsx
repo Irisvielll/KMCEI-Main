@@ -73,7 +73,7 @@ export const SongCard: React.FC<{ song: Song }> = ({ song }) => (
 );
 
 export const ComingSoonCard: React.FC = () => (
-  <div className="min-w-[300px] flex-shrink-0 flex flex-col items-center justify-center glass-card border-dashed border-brand-gold/20 opacity-40 hover:opacity-100 transition-all duration-500 group relative overflow-hidden">
+  <div className="w-full h-full flex flex-col items-center justify-center glass-card border-dashed border-brand-gold/20 opacity-40 hover:opacity-100 transition-all duration-500 group relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
     <div className="w-16 h-16 rounded-full border border-brand-gold/20 flex items-center justify-center mb-4 group-hover:border-brand-gold group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-500">
       <Zap size={24} className="text-brand-gold/40 group-hover:text-brand-gold transition-colors" />
@@ -92,3 +92,39 @@ export const TechIcon: React.FC<TechIconProps> = ({ Icon, className = "" }) => (
     <Icon size={18} className="text-brand-accent" strokeWidth={1.5} />
   </div>
 );
+
+export const AquariusConstellation: React.FC = () => {
+  return (
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none overflow-hidden z-0">
+      <svg 
+        viewBox="0 0 1000 1000" 
+        className="absolute top-1/2 left-1/2 w-full h-full max-w-7xl animate-constellation-strobe"
+      >
+        <g stroke="rgba(0, 240, 255, 0.2)" strokeWidth="0.5" fill="none">
+          <path d="M400,300 L450,350 L550,320 L650,380 L750,350 L850,400" />
+          <path d="M450,350 L420,450 L350,550 L250,600" />
+          <path d="M420,450 L500,500 L580,480 L650,550 L720,520" />
+          <path d="M500,500 L480,600 L520,700 L600,750" />
+        </g>
+        <g fill="rgba(0, 240, 255, 0.5)">
+          <circle cx="400" cy="300" r="2" />
+          <circle cx="450" cy="350" r="3" />
+          <circle cx="550" cy="320" r="2" />
+          <circle cx="650" cy="380" r="2.5" />
+          <circle cx="750" cy="350" r="2" />
+          <circle cx="850" cy="400" r="3" />
+          <circle cx="420" cy="450" r="2.5" />
+          <circle cx="350" cy="550" r="2" />
+          <circle cx="250" cy="600" r="2" />
+          <circle cx="500" cy="500" r="3" />
+          <circle cx="580" cy="480" r="2" />
+          <circle cx="650" cy="550" r="2.5" />
+          <circle cx="720" cy="520" r="2" />
+          <circle cx="480" cy="600" r="2" />
+          <circle cx="520" cy="700" r="2.5" />
+          <circle cx="600" cy="750" r="2" />
+        </g>
+      </svg>
+    </div>
+  );
+};

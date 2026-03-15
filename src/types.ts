@@ -32,7 +32,7 @@ export interface Game {
 }
 
 export interface MediaLink {
-  platform: 'YouTube' | 'Instagram' | 'X' | 'LinkedIn' | 'SoundCloud';
+  platform: string;
   url: string;
   icon: LucideIcon;
 }

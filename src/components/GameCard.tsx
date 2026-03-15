@@ -25,14 +25,14 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
         />
         
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center">
-          <h4 className="text-2xl font-display text-white mb-3">{game.title}</h4>
-          <p className="text-sm text-white/70 leading-relaxed">
+        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 md:p-8 text-center">
+          <h4 className="text-xl md:text-2xl font-display text-white mb-2 md:mb-3">{game.title}</h4>
+          <p className="text-xs md:text-sm text-white/70 leading-relaxed line-clamp-3 md:line-clamp-none">
             {game.description}
           </p>
-          <div className="mt-6 flex items-center gap-2 text-[10px] font-mono text-brand-accent uppercase tracking-widest">
+          <div className="mt-4 md:mt-6 flex items-center gap-2 text-[8px] md:text-[10px] font-mono text-brand-accent uppercase tracking-widest">
             <span>Click for details</span>
-            <ChevronRight size={12} className={isOpen ? 'rotate-90 transition-transform' : 'transition-transform'} />
+            <ChevronRight size={10} className={isOpen ? 'rotate-90 transition-transform' : 'transition-transform'} />
           </div>
         </div>
       </motion.div>

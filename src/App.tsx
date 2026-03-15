@@ -33,6 +33,7 @@ import {
   SongCard, 
   ComingSoonCard, 
   TechIcon,
+  AquariusConstellation,
   LoginModal,
   ErrorBoundary
 } from './components';
@@ -90,6 +91,7 @@ function AppContent() {
           {/* Hero Section */}
           <section className="relative py-32 min-h-[70vh] flex flex-col justify-center">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-brand-accent/5 blur-[150px] rounded-full" />
+            <AquariusConstellation />
             
             <div className="relative text-center space-y-12">
               <motion.div 
@@ -130,13 +132,13 @@ function AppContent() {
               <p className="text-sm text-white/40 font-mono uppercase tracking-widest">Interactive Realities</p>
             </div>
 
-            <div className="lg:w-3/4 flex overflow-x-auto pb-8 gap-12 luxury-scroll snap-x snap-mandatory">
+            <div className="lg:w-3/4 flex overflow-x-auto pb-8 gap-6 md:gap-12 luxury-scroll snap-x snap-mandatory">
               {GAMES.map((game) => (
-                <div key={game.id} className="w-full lg:w-[calc(50%-24px)] min-w-[320px] shrink-0 snap-start">
+                <div key={game.id} className="w-[280px] md:w-[calc(50%-24px)] shrink-0 snap-start">
                   <GameCard game={game} />
                 </div>
               ))}
-              <div className="w-full lg:w-[calc(50%-24px)] min-w-[320px] flex shrink-0 snap-start">
+              <div className="w-[280px] md:w-[calc(50%-24px)] flex shrink-0 snap-start">
                 <ComingSoonCard />
               </div>
             </div>
@@ -220,6 +222,43 @@ function AppContent() {
                   Ko-fi
                 </span>
               </motion.a>
+            </div>
+
+            {/* Team Media Section */}
+            <div className="space-y-8 pt-12 border-t border-white/5">
+              <div className="space-y-2">
+                <h3 className="text-3xl font-display">Team Media</h3>
+                <p className="text-[10px] text-white/40 font-mono uppercase tracking-widest">Individual Member Channels</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {TEAM_MEMBERS.map((member) => (
+                  <div key={member.id} className="glass-card p-6 space-y-4 border-white/5 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 blur-[40px] -mr-16 -mt-16 group-hover:bg-brand-accent/10 transition-colors" />
+                    <div className="flex items-center gap-4 relative">
+                      <div className="w-12 h-12 rounded-full overflow-hidden border border-brand-accent/20">
+                        <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-display">{member.name}</h4>
+                        <p className="text-[8px] font-mono text-white/40 uppercase tracking-widest">{member.role}</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-3 relative">
+                      {member.links.map((link, idx) => (
+                        <motion.a
+                          key={idx}
+                          href={link.url}
+                          whileHover={{ scale: 1.1, y: -2 }}
+                          className="p-2 bg-white/5 rounded-lg hover:bg-brand-accent/20 transition-colors group/link"
+                          aria-label={`${member.name}'s ${link.platform}`}
+                        >
+                          <link.icon size={16} className="text-white/40 group-hover/link:text-brand-accent transition-colors" />
+                        </motion.a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
@@ -330,7 +369,6 @@ function AppContent() {
               <h4 className="text-[10px] font-mono text-brand-accent uppercase tracking-widest">Connect</h4>
               <div className="flex gap-4">
                 <TechIcon Icon={Instagram} />
-                <TechIcon Icon={Youtube} />
                 <TechIcon Icon={Twitter} />
                 <TechIcon Icon={Mail} />
               </div>

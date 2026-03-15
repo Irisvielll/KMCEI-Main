@@ -40,6 +40,23 @@
   100% { border-color: var(--color-brand-accent); }
 }
 
+@keyframes constellation-strobe {
+  0%, 98%, 100% { 
+    opacity: 0.1; 
+    transform: scale(1) translate(-50%, -50%); 
+    filter: blur(2px); 
+  }
+  99% { 
+    opacity: 0.8; 
+    transform: scale(1.05) translate(-50%, -50%); 
+    filter: blur(0px); 
+  }
+}
+
+.animate-constellation-strobe {
+  animation: constellation-strobe 30s infinite;
+}
+
 @layer base {
   body {
     @apply bg-brand-black text-white font-sans antialiased selection:bg-brand-accent selection:text-black;

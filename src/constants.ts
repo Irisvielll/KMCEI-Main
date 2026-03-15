@@ -47,9 +47,8 @@ export const GAMES: Game[] = [
 ];
 
 export const MEDIA_LINKS: MediaLink[] = [
-  { platform: 'YouTube', url: 'https://youtube.com/@kmcei', icon: Youtube },
-  { platform: 'Instagram', url: 'https://instagram.com/kmcei', icon: Instagram },
-  { platform: 'X', url: 'https://x.com/kmcei', icon: Twitter },
+  { platform: 'Instagram', url: 'https://instagram.com/kmcei_productions', icon: Instagram },
+  { platform: 'X', url: 'https://x.com/kmcei_productions', icon: Twitter },
 ];
 
 export const NOVELS: Novel[] = [
@@ -173,6 +172,20 @@ export const TEAM_MEMBERS: TeamMember[] = [
     links: [
       { platform: 'YouTube', url: '#', icon: Youtube },
       { platform: 'SoundCloud', url: '#', icon: Music },
+    ]
+  },
+  {
+    id: 'cyuvielva',
+    name: 'Cyuvielva',
+    role: 'Streamer and Media Manager',
+    bio: "Bringing KMCEI's vision to life through live streaming and strategic media management.",
+    image: 'https://picsum.photos/seed/cyuviel/400/400',
+    tier: 'standard',
+    links: [
+      { platform: 'YouTube', url: 'https://www.youtube.com/channel/UC81VTKtxzmzAz3dzsl420Yw', icon: Youtube },
+      { platform: 'Instagram', url: 'https://www.instagram.com/cyuviel/?hl=en', icon: Instagram },
+      { platform: 'TikTok', url: 'https://www.tiktok.com/@cyuvielva?lang=en', icon: Music },
+      { platform: 'X', url: 'https://x.com/CyuVielVA', icon: Twitter },
     ]
   }
 ];
