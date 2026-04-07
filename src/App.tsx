@@ -278,7 +278,7 @@ function AppContent() {
                     aria-label={`Read more about ${novel.title}`}
                   >
                     <div className="w-32 shrink-0 aspect-[2/3] overflow-hidden rounded-lg">
-                      <img src={novel.image} alt={novel.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                      <img src={novel.image} alt={novel.title} className="w-full h-full object-cover transition-all duration-700" />
                     </div>
                     <div className="space-y-3">
                       <h4 className="text-2xl font-display text-white">{novel.title}</h4>

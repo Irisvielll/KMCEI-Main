@@ -22,26 +22,38 @@ import {
 export const GAMES: Game[] = [
   {
     id: 'game-1',
-    title: 'Project Aether',
-    description: 'A high-octane tactical shooter set in a collapsing digital reality.',
-    image: 'https://picsum.photos/seed/game1/800/450',
+    title: 'Candle letters',
+    description: 'Traversing between the plane of life and the depths of dreams alongside your childhood friends. finding a way to break a curse to save a life or use the curse for your depraved ideals',
+    image: 'https://placehold.co/800x450/000000/FFFFFF?text=Candle+Letters',
     info: {
       platform: 'PC / Console',
-      releaseDate: 'TBA 2026',
-      engine: 'Unreal Engine 5',
-      genre: 'Tactical FPS'
+      releaseDate: 'TBA',
+      engine: 'TBA',
+      genre: 'Adventure / Narrative'
     }
   },
   {
     id: 'game-2',
-    title: 'Void Runner',
-    description: 'An atmospheric parkour game through the fragments of a lost civilization.',
-    image: 'https://picsum.photos/seed/game2/800/450',
+    title: 'Khatalein',
+    description: 'Visual novel and turn based game. that focuses on the life of Chatarine',
+    image: 'https://placehold.co/800x450/006400/FFFFFF?text=Khatalein',
     info: {
       platform: 'PC',
-      releaseDate: 'Q4 2025',
-      engine: 'Unity',
-      genre: 'Action / Platformer'
+      releaseDate: 'TBA',
+      engine: 'TBA',
+      genre: 'Visual Novel / RPG'
+    }
+  },
+  {
+    id: 'game-3',
+    title: 'TBA',
+    description: 'TBA',
+    image: 'https://placehold.co/800x450/333333/FFFFFF?text=TBA',
+    info: {
+      platform: 'TBA',
+      releaseDate: 'TBA',
+      engine: 'TBA',
+      genre: 'TBA'
     }
   }
 ];
@@ -54,10 +66,17 @@ export const MEDIA_LINKS: MediaLink[] = [
 export const NOVELS: Novel[] = [
   {
     id: 'novel-1',
-    title: 'The Last Realm',
-    description: 'The first volume in the KMCEI literary universe.',
+    title: "Auvelliene's Plea",
+    description: 'Velle finds himself at an impasse when his vision of two worlds collide. Given the chance to fix one, will he save the world of his old friends, albeit forgotten. or his original world that he got sent back to.',
     link: '#',
-    image: 'https://picsum.photos/seed/novel-cover/400/600'
+    image: 'https://placehold.co/400x600/FF0000/FFFFFF?text=Auvelliene+Plea'
+  },
+  {
+    id: 'novel-2',
+    title: 'TBA',
+    description: 'TBA',
+    link: '#',
+    image: 'https://placehold.co/400x600/0000FF/FFFFFF?text=TBA'
   }
 ];
 
