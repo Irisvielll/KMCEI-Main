@@ -26,7 +26,6 @@ import {
   SUPPORT_LINK
 } from './constants';
 import { 
-  CybersigilismBackground, 
   MemberCard, 
   GameCard, 
   MerchCard, 
@@ -48,8 +47,7 @@ function AppContent() {
   }, [trackEvent]);
 
   return (
-    <div className="min-h-screen pb-20 selection:bg-brand-accent selection:text-black">
-      <CybersigilismBackground />
+    <div className="min-h-screen pb-20 selection:bg-brand-accent selection:text-black bg-brand-black">
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
       {/* Navigation */}

@@ -1,4 +1,3 @@
-export * from './CybersigilismBackground';
 export * from './MemberCard';
 export * from './GameCard';
 export * from './UIComponents';
